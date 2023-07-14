@@ -1,31 +1,29 @@
-# Module 12 Report Template
-
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+This analysis intends to make use of several machine learning techniques to train and assess how well Logistic Regression Models perform at determining a borrower's credit history. The models' results were analyzed after they had been trained using various techniques to determine which model performed better. The numbers 0 (healthy loan) and 1 (high-risk loan) are the model's predictors.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+The dataset was split into features and labels, then into training and testing sets, in order to build the models.
+
+
+* By creating a logistic regression model, training it with the initial training sets (x_train, y_train), fitting it to the training sets, and utilizing it to make predictions, Machine Learning Model 1 was created.
+* By resampling the initial training data with the RandomOverSampler module, a logistic regression model was instantiated, fitted to the resampled training sets (x_resample, y_resample), and predictions were produced.
+
+Based on the balance accuracy score, confusion matrix, precision, recall, and f1-score in the classification report, each model's performance was calculated.
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
-
 * Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
+  * Model 1, which was trained on the original data, predicts the two labels with an accuracy of 94.4%. With precision and recall ratings of 1.00, the model does an excellent job of forecasting the healthy loans. The model's capability to identify high-risk loans might be enhanced. Only 87% of real high-risk loans were accurately predicted, according to the precision score for high-risk loans, which is 0.87. The model only correctly recognized 89% of the high-risk loans in the sample, according to the recall score for high-risk loans, which is 0.89.
 
 
 
 * Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+  * Model 2 has a 99.6% accuracy rate in predicting the two labels after being trained on the resampled data. With precision and recall scores of 1.00, the model does well at predicting the sound loans. The recall score has increased to 1.00, indicating that the model can now predict all high-risk loans in the dataset, even while the accuracy score for high-risk loans remains at 0.87.
+
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+According to the analysis, Model 2 looks to be more accurate overall and performs better than Model 1 in predicting high-risk loans. In particular, Model 2 successfully identified every high-risk loan in the dataset while achieving a pretty high precision in high-risk loan prediction, which is regarded as a relatively strong performance in this situation. In order to identify high-risk loans and to generally forecast labels more accurately, I would advise utilizing Model 2.
 
-If you do not recommend any of the models, please justify your reasoning.
+
+
