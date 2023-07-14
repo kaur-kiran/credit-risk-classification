@@ -6,7 +6,7 @@ The dataset was split into features and labels, then into training and testing s
 
 
 * By creating a logistic regression model, training it with the initial training sets (x_train, y_train), fitting it to the training sets, and utilizing it to make predictions, Machine Learning Model 1 was created.
-* By resampling the initial training data with the RandomOverSampler module, a logistic regression model was instantiated, fitted to the resampled training sets (x_resample, y_resample), and predictions were produced.
+* By resampling the initial training data with the RandomOverSampler module, a logistic regression model was instantiated, fitted to the resampled training sets (x_resample, y_resample), and predictions were made.
 
 Based on the balance accuracy score, confusion matrix, precision, recall, and f1-score in the classification report, each model's performance was calculated.
 
